@@ -8,11 +8,17 @@ import user from "../data/user";
 console.log(user);
 
 function App() {
+  console.log(user.links)
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home firebrick={user.color}
+        user={user}
+        name={user.name}
+        city={user.city} />
+      <About bio={user.bio}
+
+      />
     </div>
   );
 }
